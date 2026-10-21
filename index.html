@@ -1,0 +1,525 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Sneha ❤️</title>
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Georgia, serif;
+  background: linear-gradient(
+    135deg,
+    #fff5e9,
+    #ffe1e8,
+    #fcebdc
+  );
+  color: #80515d;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+
+
+.card {
+  width: 100%;
+  max-width: 390px;
+  box-sizing: border-box;
+  padding: 32px 22px;
+  background: #fffaf2;
+  border: 2px solid #f1ccd0;
+  border-radius: 8px 8px 22px 22px;
+  box-shadow:
+    0 12px 30px rgba(163, 100, 112, 0.16),
+    inset 0 0 25px rgba(255, 231, 220, 0.45);
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  color: #c45d7c;
+  font-family: Georgia, serif;
+  font-size: 29px;
+  letter-spacing: 0.5px;
+  text-shadow: 1px 2px 8px #f5c8d5;
+}
+
+
+h1 {
+  color: #d65b96;
+  font-size: 29px;
+  letter-spacing: 0.5px;
+}
+
+p {
+  line-height: 1.8;
+  font-size: 17px;
+  color: #765078;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 14px 12px;
+  margin: 12px 0;
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #f08cbd, #b99af7);
+  color: white;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 5px 14px rgba(202, 125, 190, 0.2);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+button.secondary {
+  background: #f4e6ff;
+  color: #925e9b;
+  box-shadow: none;
+}
+
+#message {
+  min-height: 90px;
+  margin-top: 20px;
+}
+
+#secretMessage {
+  margin-top: 16px;
+  padding: 12px;
+  background: #fff0f7;
+  border-radius: 18px;
+  animation: fadeIn 0.5s ease;
+}
+
+.heart {
+  position: fixed;
+  bottom: -30px;
+  pointer-events: none;
+  animation: floatUp 5s linear forwards;
+  z-index: 1;
+}
+
+@keyframes floatUp {
+  to {
+    transform: translateY(-110vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Sneha's magical wish card */
+.magic-wish {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  margin: 24px auto;
+  padding: 28px 20px;
+  width: 100%;
+  max-width: 390px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #765078;
+  border: 1px solid #f1d9f5;
+  border-radius: 28px;
+  background: linear-gradient(145deg, #fff1f8, #eee5ff, #fff5fc);
+  box-shadow: 0 12px 35px #b88acb35;
+}
+.magic-wish h2 {
+  margin: 10px 0;
+  color: #bf5a9b;
+  font-size: 29px;
+}
+.wish-small {
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: #9b78b0;
+}
+.wish-intro {
+  line-height: 1.8;
+  color: #82648d;
+}
+.wish-stars {
+  color: #b18ae8;
+  font-size: 27px;
+  letter-spacing: 12px;
+  animation: wishTwinkle 2s ease-in-out infinite alternate;
+}
+.wish-orb {
+  display: grid;
+  place-items: center;
+  margin: 16px auto;
+  width: 76px;
+  height: 76px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f9d9f0, #ded2ff);
+  box-shadow: 0 0 25px #d7a9f5a0;
+  font-size: 32px;
+  animation: wishGlow 2.5s ease-in-out infinite alternate;
+}
+.magic-wish button {
+  width: 100%;
+  margin-top: 12px;
+  padding: 14px;
+  border: 0;
+  border-radius: 17px;
+  color: white;
+  background: linear-gradient(120deg, #e783ba, #a68aed);
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+#wishStory {
+  display: none;
+  margin-top: 18px;
+}
+#wishLine {
+  min-height: 60px;
+  padding: 15px 10px;
+  color: #81537f;
+  font-size: 16px;
+  line-height: 1.9;
+  overflow-wrap: anywhere;
+}
+#wishLine.line-glow {
+  animation: wishAppear .65s ease both;
+}
+.magic-spark {
+  position: absolute;
+  z-index: -1;
+  pointer-events: none;
+  color: #b58ae7;
+  animation: wishSparkle 2.4s ease-out forwards;
+}
+@keyframes wishTwinkle {
+  from { opacity: .55; }
+  to { opacity: 1; }
+}
+@keyframes wishGlow {
+  from { transform: scale(.97); }
+  to { transform: scale(1.04); }
+}
+@keyframes wishAppear {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes wishSparkle {
+  from { opacity: 0; transform: translateY(15px) scale(.5); }
+  20% { opacity: 1; }
+  to { opacity: 0; transform: translateY(-100px) scale(1.4); }
+}
+
+
+
+#snehaWish {
+  display: none;
+  width: 100%;
+  max-width: 390px;
+  box-sizing: border-box;
+  margin: 20px auto;
+}
+
+
+
+.teddy-special {
+  margin: 24px auto;
+  padding: 20px 14px;
+  text-align: center;
+  border-radius: 24px;
+  background: linear-gradient(135deg, #fff0f7, #eee5ff);
+  color: #9b578b;
+}
+.teddy-special button {
+  border: none;
+  border-radius: 18px;
+  padding: 14px 20px;
+  background: linear-gradient(120deg, #f08abe, #b59af5);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 6px 18px #d9a5e566;
+}
+#teddyGift {
+  margin-top: 20px;
+}
+.teddy-bounce {
+  font-size: 65px;
+  animation: teddyPop .7s ease;
+}
+@keyframes teddyPop {
+  0% { transform: scale(0); }
+  70% { transform: scale(1.2); }
+  100% { transform: scale(1); }
+}
+
+</style>
+</head>
+<body>
+
+<div class="card" id="firstPage">
+  <div style="font-size:42px">💌</div>
+  <h1>Hey Sneha ❤️</h1>
+  <p>Ek chhoti si baat hai...<br>
+  Dil se sunogi? 🥹</p>
+
+  <button id="beginBtn" onclick="showMessage(0); this.style.display='none';">
+  Tap to Begin 💌
+</button>
+
+  <div id="message"></div>
+
+  <div id="choices" style="display:none">
+    <button onclick="showMessage(1)">Our friendship 🫶</button>
+    <button onclick="showMessage(2)">Something from my heart 💌</button>
+    <button onclick="showMessage(3)">One little question 💖</button>
+  </div>
+
+<button id="secretBtn" onclick="revealSecret()">
+  💌 Tap for one last secret
+</button>
+
+<div id="secretMessage" style="display:none;">
+  <p>I've never wanted you to feel like you're just an option. ❤️</p>
+  <p>Main bas aapki care karna chahta hoon aur hamesha aapki respect karna chahta hoon. 🫶</p>
+  <p>Aap mere liye bahut special ho. 🥹💗</p>
+</div>
+  
+<button type="button" onclick="openSnehaWish()">
+  🌙 Open My Magical Surprise 💜
+</button>
+
+<div class="teddy-special">
+  <p>Ek chhota sa gift tumhare liye 🥹</p>
+
+  <button type="button" id="teddyBtn"
+    onclick="showTeddyGift()">
+    🎁 Open Your Surprise
+  </button>
+
+  <div id="teddyGift" style="display:none;">
+    <div class="teddy-bounce">🧸💗</div>
+    <h3>A little teddy for you, Sneha! 💕</h3>
+    <p>Jab bhi udaas ho, yaad rakhna ki tum special ho. 🫶</p>
+  </div>
+</div>
+
+</div>
+
+<script>
+const messages = [
+  "Sneha, tumhari friendship mere liye bahut special hai. Tumse baat karke din thoda aur achha lagta hai. ❤️",
+  "Main chahta hoon ki hamari friendship hamesha trust, respect aur happiness se bhari rahe. Tumhari baatein aur feelings mere liye matter karti hain. 🫶",
+  "Sach kahun toh, tum mere liye sirf ek friend se thodi zyada special ban gayi ho. Main tumhari care karna chahta hoon aur tumhe waise hi respect dena chahta hoon jaise tum deserve karti ho. 💗",
+  "Kya tum kabhi hamari friendship ko ek relationship ke roop mein explore karne ke baare mein sochogi? ❤️"
+];
+
+ function showMessage(index) {
+  const box = document.getElementById("message");
+  const choices = document.getElementById("choices");
+
+  box.innerHTML = "<p>" + messages[index] + "</p>";
+
+  if (index < 3) {
+    choices.style.display = "block";
+    choices.innerHTML =
+      '<button onclick="showMessage(' + (index + 1) + ')">Next ➜</button>';
+  } else {
+    choices.style.display = "block";
+    choices.innerHTML = `
+      <button onclick="answer('yes', this)">Yes ❤️</button>
+      <button class="secondary" onclick="answer('think', this)">Sochne do 💭</button>
+      <button class="secondary" onclick="answer('friends', this)">Friends 🤝</button>
+    `;
+  }
+}
+
+function answer(choice, clickedButton) {
+  clickedButton.style.display = "none";
+  const SAVE_URL = "https://script.google.com/macros/s/AKfycbyDmxV3fLPDFIW3mLef5kGKXGASU_MG5_vsN2Kpi1QLQJBdUzME5it9PipWSATcxA7Q/exec";
+
+const savedChoice = {
+  yes: "Yes",
+  think: "Sochne do",
+  friends: "Friends"
+};
+
+if (savedChoice[choice]) {
+  fetch(SAVE_URL + "?choice=" +
+    encodeURIComponent(savedChoice[choice]), {
+      mode: "no-cors"
+    });
+}
+  const box = document.getElementById("message");
+  const replies = {
+    yes: "Tumne mere face par smile la di, Sneha! ❤️ Chalo, aaram se ek doosre ko aur samajhte hain. Koi jaldi nahi. 🥹",
+    think: "Bilkul, Sneha! ❤️ Tum aaram se soch sakti ho. Tumhari feelings aur comfort mere liye important hain. Koi pressure nahi. 🌷",
+    friends: "Thank you honestly batane ke liye, Sneha. ❤️ Main tumhari choice ki respect karta hoon. Hamari friendship bhi mere liye special hai. 🫶"
+  };
+  box.innerHTML = "<p>" + replies[choice] + "</p>";
+  document.getElementById("choices").style.display = "none";
+}
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.textContent = ["💗","💕","💖","❤️"][Math.floor(Math.random()*4)];
+  heart.style.left = Math.random()*100 + "vw";
+  heart.style.fontSize = (15 + Math.random()*15) + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 5000);
+}
+setInterval(createHeart, 650);
+  
+const SAVE_URL = "https://script.google.com/macros/s/AKfycbyDmxV3fLPDFIW3mLef5kGKXGASU_MG5_vsN2Kpi1QLQJBdUzME5it9PipWSATcxA7Q/exec";
+
+document.querySelectorAll("button").forEach(button => {
+  button.addEventListener("click", function () {
+    const text = button.textContent.trim().toLowerCase();
+    let choice = "";
+
+    if (text.includes("yes")) choice = "Yes";
+    else if (text.includes("sochne do")) choice = "Sochne do";
+    else if (text.includes("friends")) choice = "Friends";
+
+    if (choice) {
+      fetch(SAVE_URL + "?choice=" + encodeURIComponent(choice), {
+        mode: "no-cors"
+      });
+    }
+  });
+});
+
+function revealSecret() {
+  document.getElementById("secretMessage").style.display = "block";
+  document.getElementById("secretBtn").style.display = "none";
+}
+
+const snehaMagicLines = [
+  "Take a little breath, Sneha... this moment is just for you. 🌙",
+  "I hope your life is always filled with little reasons to smile. ✨",
+  "Aapki khushi aur aapki respect mere liye important hai. 🫶",
+  "Aur ek chhoti si baat... aap mere liye bahut special ho. 💜"
+];
+
+let snehaMagicIndex = 0;
+
+function startSnehaMagic() {
+  snehaMagicIndex = 0;
+  document.getElementById("wishStory").style.display = "block";
+  document.getElementById("wishStartBtn").style.display = "none";
+  nextSnehaMagicLine();
+  makeSnehaMagicStars();
+}
+
+function nextSnehaMagicLine() {
+  const line = document.getElementById("wishLine");
+  const nextBtn = document.getElementById("wishNextBtn");
+
+  if (snehaMagicIndex >= snehaMagicLines.length) {
+    line.textContent = "May your little wishes find their way to you. 💗";
+    nextBtn.style.display = "none";
+    return;
+  }
+
+  line.classList.remove("line-glow");
+  line.textContent = snehaMagicLines[snehaMagicIndex];
+  snehaMagicIndex++;
+
+  void line.offsetWidth;
+  line.classList.add("line-glow");
+
+  if (snehaMagicIndex >= snehaMagicLines.length) {
+    nextBtn.textContent = "One last wish 💗";
+  }
+}
+
+function makeSnehaMagicStars() {
+  const box = document.getElementById("snehaWish");
+  const symbols = ["✦", "✧", "⋆", "✨"];
+
+  for (let i = 0; i < 14; i++) {
+    const star = document.createElement("span");
+    star.className = "magic-spark";
+    star.textContent = symbols[i % symbols.length];
+    star.style.left = (5 + Math.random() * 90) + "%";
+    star.style.top = (45 + Math.random() * 40) + "%";
+    star.style.animationDelay = (Math.random() * 0.7) + "s";
+    box.appendChild(star);
+
+    setTimeout(function() {
+      star.remove();
+    }, 3000);
+  }
+}
+
+
+function openSnehaWish() {
+  document.getElementById("firstPage").style.display = "none";
+
+  const wishPage = document.getElementById("snehaWish");
+  wishPage.style.display = "block";
+  wishPage.scrollIntoView({
+    behavior: "smooth",
+    block: "start"
+  });
+}
+
+
+function showTeddyGift() {
+  document.getElementById("teddyGift").style.display = "block";
+  document.getElementById("teddyBtn").textContent = "💗 Your Teddy Gift";
+}
+
+</script>
+  
+<section id="snehaWish" class="magic-wish" style="display:none;">
+  <div class="wish-stars">✦ ✧ ✦</div>
+  <div class="wish-orb">🌙</div>
+  <p class="wish-small">A LITTLE MAGIC FOR</p>
+  <h2>Sneha 💜</h2>
+  <p class="wish-intro">Every heart has a little wish... ✨</p>
+
+  <button type="button" id="wishStartBtn"
+    onclick="startSnehaMagic()">
+    ✨ Make a Wish
+  </button>
+
+  <div id="wishStory">
+    <p id="wishLine"></p>
+    <button type="button" id="wishNextBtn"
+      onclick="nextSnehaMagicLine()">
+      Reveal next ✨
+    </button>
+  </div>
+</section>
+
+</body>
+</html>
