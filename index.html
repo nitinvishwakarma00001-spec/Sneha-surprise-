@@ -1,525 +1,539 @@
 
 <!DOCTYPE html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>For Sneha ❤️</title>
+<title>A Little Surprise for Sneha 💗</title>
+
 <style>
-
-* {
-  box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
 
 body {
   margin: 0;
   min-height: 100vh;
   font-family: Georgia, serif;
-  background: linear-gradient(
-    135deg,
-    #fff5e9,
-    #ffe1e8,
-    #fcebdc
-  );
-  color: #80515d;
+  color: #703653;
   text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  box-sizing: border-box;
+  background: linear-gradient(145deg, #fff0f6, #f3e8ff, #ffe4ec);
   overflow-x: hidden;
 }
 
-
-
-.card {
-  width: 100%;
-  max-width: 390px;
-  box-sizing: border-box;
-  padding: 32px 22px;
-  background: #fffaf2;
-  border: 2px solid #f1ccd0;
-  border-radius: 8px 8px 22px 22px;
-  box-shadow:
-    0 12px 30px rgba(163, 100, 112, 0.16),
-    inset 0 0 25px rgba(255, 231, 220, 0.45);
+.container {
+  width: min(92%, 430px);
+  margin: 35px auto;
+  padding: 26px 20px;
+  border: 1px solid #ffffffb5;
+  border-radius: 28px;
+  background: #ffffffb8;
+  box-shadow: 0 12px 45px #bd6e9630;
   position: relative;
-  z-index: 2;
+  z-index: 1;
 }
 
-h1 {
-  color: #c45d7c;
-  font-family: Georgia, serif;
-  font-size: 29px;
-  letter-spacing: 0.5px;
-  text-shadow: 1px 2px 8px #f5c8d5;
-}
+h1 { color: #c04478; font-size: 29px; }
+h2 { color: #bc5080; }
+p { line-height: 1.8; }
 
-
-h1 {
-  color: #d65b96;
-  font-size: 29px;
-  letter-spacing: 0.5px;
-}
-
-p {
-  line-height: 1.8;
-  font-size: 17px;
-  color: #765078;
-}
+.subtitle { color: #9b6582; }
 
 button {
-  display: block;
-  width: 100%;
-  padding: 14px 12px;
-  margin: 12px 0;
   border: none;
-  border-radius: 18px;
-  background: linear-gradient(135deg, #f08cbd, #b99af7);
-  color: white;
-  font-family: inherit;
-  font-size: 16px;
+  border-radius: 30px;
+  padding: 13px 19px;
+  margin: 9px 3px;
+  width: 100%;
+  max-width: 300px;
+  font-size: 15px;
   font-weight: bold;
+  font-family: inherit;
+  color: white;
+  background: linear-gradient(110deg, #ec76a6, #b57ae8);
+  box-shadow: 0 5px 17px #d78ab550;
   cursor: pointer;
-  transition: transform 0.2s, box-shadow 0.2s;
-  box-shadow: 0 5px 14px rgba(202, 125, 190, 0.2);
+  transition: transform .2s, box-shadow .2s;
 }
 
-button:active {
-  transform: scale(0.97);
+button:active { transform: scale(.96); }
+
+.stage {
+  display: none;
+  animation: appear .8s ease both;
 }
 
-button.secondary {
-  background: #f4e6ff;
-  color: #925e9b;
-  box-shadow: none;
+.stage.active { display: block; }
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(20px) scale(.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-#message {
+.heart-icon {
+  font-size: 55px;
+  animation: heartbeat 1.5s infinite;
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.12); }
+}
+
+.letter-paper {
+  margin: 18px 0;
+  padding: 23px 17px;
+  background: #fffaf0;
+  border: 1px solid #f0d6dc;
+  border-radius: 12px;
+  box-shadow: 0 8px 22px #b77c8b20;
+  animation: letterOpen 1s ease both;
+}
+
+@keyframes letterOpen {
+  from { opacity: 0; transform: perspective(500px) rotateX(-12deg) scale(.9); }
+  to { opacity: 1; transform: perspective(500px) rotateX(0) scale(1); }
+}
+
+.secret-card {
+  padding: 18px 14px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff0f7, #f2eaff);
+  animation: appear .9s ease both;
+}
+
+
+
+.teddy {
+  display: inline-block;
+  font-size: 82px;
+  animation: teddyBounce 2s ease-in-out infinite;
+}
+
+@keyframes teddyBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+
+
+
+.magic-orb {
+  font-size: 60px;
+  animation: heartbeat 2s infinite;
+}
+
+.magic-line {
   min-height: 90px;
-  margin-top: 20px;
-}
-
-#secretMessage {
-  margin-top: 16px;
-  padding: 12px;
-  background: #fff0f7;
-  border-radius: 18px;
-  animation: fadeIn 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 17px;
+  animation: appear .7s ease both;
 }
 
 .heart {
   position: fixed;
-  bottom: -30px;
+  bottom: -35px;
   pointer-events: none;
+  z-index: 0;
   animation: floatUp 5s linear forwards;
-  z-index: 1;
 }
 
 @keyframes floatUp {
-  to {
-    transform: translateY(-110vh) rotate(360deg);
-    opacity: 0;
-  }
+  from { transform: translateY(0) rotate(0); opacity: .85; }
+  to { transform: translateY(-110vh) rotate(35deg); opacity: 0; }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(8px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.footer { font-size: 12px; color: #b17c9a; margin-top: 22px; }
+  
+
+#heartIntro {
+  min-height: 65vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 25px 10px 35px;
+  animation: appear 1s ease both;
 }
 
-/* Sneha's magical wish card */
-.magic-wish {
-  position: relative;
-  overflow: hidden;
-  isolation: isolate;
-  margin: 24px auto;
-  padding: 28px 20px;
-  width: 100%;
-  max-width: 390px;
-  box-sizing: border-box;
-  text-align: center;
-  color: #765078;
-  border: 1px solid #f1d9f5;
-  border-radius: 28px;
-  background: linear-gradient(145deg, #fff1f8, #eee5ff, #fff5fc);
-  box-shadow: 0 12px 35px #b88acb35;
-}
-.magic-wish h2 {
-  margin: 10px 0;
-  color: #bf5a9b;
-  font-size: 29px;
-}
-.wish-small {
-  font-size: 11px;
-  letter-spacing: 3px;
-  color: #9b78b0;
-}
-.wish-intro {
-  line-height: 1.8;
-  color: #82648d;
-}
-.wish-stars {
-  color: #b18ae8;
-  font-size: 27px;
-  letter-spacing: 12px;
-  animation: wishTwinkle 2s ease-in-out infinite alternate;
-}
-.wish-orb {
-  display: grid;
-  place-items: center;
-  margin: 16px auto;
-  width: 76px;
-  height: 76px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #f9d9f0, #ded2ff);
-  box-shadow: 0 0 25px #d7a9f5a0;
-  font-size: 32px;
-  animation: wishGlow 2.5s ease-in-out infinite alternate;
-}
-.magic-wish button {
-  width: 100%;
-  margin-top: 12px;
-  padding: 14px;
-  border: 0;
-  border-radius: 17px;
-  color: white;
-  background: linear-gradient(120deg, #e783ba, #a68aed);
-  font-size: 16px;
-  font-weight: bold;
+
+.intro-heart {
+  display: inline-block;
+  font-size: 88px;
   cursor: pointer;
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  position: relative;
+  filter:
+    drop-shadow(0 0 8px rgba(255, 170, 220, 0.8))
+    drop-shadow(0 0 24px rgba(255, 70, 160, 0.45));
+  animation: glassHeartFloat 2.4s ease-in-out infinite;
+  transform-origin: center;
 }
-#wishStory {
-  display: none;
-  margin-top: 18px;
+
+@keyframes glassHeartFloat {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-7px) scale(1.06);
+  }
 }
-#wishLine {
-  min-height: 60px;
-  padding: 15px 10px;
-  color: #81537f;
-  font-size: 16px;
-  line-height: 1.9;
-  overflow-wrap: anywhere;
+
+@keyframes softBeat {
+  0%, 100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 10px #ff65ad);
+  }
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 24px #ff3e9c);
+  }
 }
-#wishLine.line-glow {
-  animation: wishAppear .65s ease both;
-}
-.magic-spark {
-  position: absolute;
-  z-index: -1;
+
+
+.heart-burst {
+  position: fixed;
+  z-index: 999;
   pointer-events: none;
-  color: #b58ae7;
-  animation: wishSparkle 2.4s ease-out forwards;
-}
-@keyframes wishTwinkle {
-  from { opacity: .55; }
-  to { opacity: 1; }
-}
-@keyframes wishGlow {
-  from { transform: scale(.97); }
-  to { transform: scale(1.04); }
-}
-@keyframes wishAppear {
-  from { opacity: 0; transform: translateY(12px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-@keyframes wishSparkle {
-  from { opacity: 0; transform: translateY(15px) scale(.5); }
-  20% { opacity: 1; }
-  to { opacity: 0; transform: translateY(-100px) scale(1.4); }
+  animation: heartFly 1.5s ease-out forwards;
 }
 
-
-
-#snehaWish {
-  display: none;
-  width: 100%;
-  max-width: 390px;
-  box-sizing: border-box;
-  margin: 20px auto;
-}
-
-
-
-.teddy-special {
-  margin: 24px auto;
-  padding: 20px 14px;
-  text-align: center;
-  border-radius: 24px;
-  background: linear-gradient(135deg, #fff0f7, #eee5ff);
-  color: #9b578b;
-}
-.teddy-special button {
-  border: none;
-  border-radius: 18px;
-  padding: 14px 20px;
-  background: linear-gradient(120deg, #f08abe, #b59af5);
-  color: white;
-  font-size: 16px;
-  font-weight: bold;
-  box-shadow: 0 6px 18px #d9a5e566;
-}
-#teddyGift {
-  margin-top: 20px;
-}
-.teddy-bounce {
-  font-size: 65px;
-  animation: teddyPop .7s ease;
-}
-@keyframes teddyPop {
-  0% { transform: scale(0); }
-  70% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+@keyframes heartFly {
+  0% {
+    transform: translate(0, 0) scale(.5);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(var(--x), var(--y)) scale(1.3);
+    opacity: 0;
+  }
 }
 
 </style>
 </head>
+
 <body>
 
-<div class="card" id="firstPage">
-  <div style="font-size:42px">💌</div>
-  <h1>Hey Sneha ❤️</h1>
-  <p>Ek chhoti si baat hai...<br>
-  Dil se sunogi? 🥹</p>
-
-  <button id="beginBtn" onclick="showMessage(0); this.style.display='none';">
-  Tap to Begin 💌
-</button>
-
-  <div id="message"></div>
-
-  <div id="choices" style="display:none">
-    <button onclick="showMessage(1)">Our friendship 🫶</button>
-    <button onclick="showMessage(2)">Something from my heart 💌</button>
-    <button onclick="showMessage(3)">One little question 💖</button>
-  </div>
-
-<button id="secretBtn" onclick="revealSecret()">
-  💌 Tap for one last secret
-</button>
-
-<div id="secretMessage" style="display:none;">
-  <p>I've never wanted you to feel like you're just an option. ❤️</p>
-  <p>Main bas aapki care karna chahta hoon aur hamesha aapki respect karna chahta hoon. 🫶</p>
-  <p>Aap mere liye bahut special ho. 🥹💗</p>
-</div>
+<main class="container">
   
-<button type="button" onclick="openSnehaWish()">
-  🌙 Open My Magical Surprise 💜
-</button>
-
-<div class="teddy-special">
-  <p>Ek chhota sa gift tumhare liye 🥹</p>
-
-  <button type="button" id="teddyBtn"
-    onclick="showTeddyGift()">
-    🎁 Open Your Surprise
-  </button>
-
-  <div id="teddyGift" style="display:none;">
-    <div class="teddy-bounce">🧸💗</div>
-    <h3>A little teddy for you, Sneha! 💕</h3>
-    <p>Jab bhi udaas ho, yaad rakhna ki tum special ho. 🫶</p>
-  </div>
+<div id="heartIntro">
+  <div class="intro-heart" onclick="startHeartIntro()">❤️</div>
+  <p>Ek chhoti si magic ke liye heart tap karo 💗</p>
 </div>
 
-</div>
+  <div class="heart-icon">💗</div>
+  <h1>Hey Sneha ♥</h1>
+  <p class="subtitle">A tiny little surprise, made just for you ✨</p>
+
+  
+  <!-- STEP 1 -->
+  <section id="step1" class="stage active">
+    <button id="beginBtn" onclick="showMessage(0); this.style.display='none';">
+      Tap to Begin 💌
+    </button>
+
+    <div id="message"></div>
+    <div id="choices" style="display:none"></div>
+  </section>
+
+  <!-- STEP 2 -->
+
+  <section id="step2" class="stage">
+    <h2>A little note for you 💗</h2>
+    <button onclick="openLetter()">💌 Open Your Secret Letter</button>
+
+    <div id="letterContent" style="display:none">
+      <div class="letter-paper">
+        <div class="heart-icon">💗</div>
+        <h3>Dear Sneha,</h3>
+        <p>Some people make life a little more beautiful...</p>
+        <p>And for me, you're one of those people. 🥹</p>
+        <p>I hope you always keep smiling. ❤️</p>
+        <p>Always wishing you happiness 🫶</p>
+      </div>
+      <button onclick="goTo('step3')">Continue to one little secret 💗</button>
+    </div>
+  </section>
+
+  <!-- STEP 3 -->
+  <section id="step3" class="stage">
+    <h2>One little thing... 💌</h2>
+    <button onclick="openSecret()">💗 Tap for One Last Secret</button>
+
+    <div id="secretContent" style="display:none" class="secret-card">
+      <p>I've never wanted you to feel like you're just an option. ❤️</p>
+      <p>Main bas aapki care karna chahta hoon aur hamesha aapki respect karna chahta hoon. 🫶</p>
+      <p>Aap mere liye bahut special ho. 🥹💗</p>
+      <button onclick="goTo('step4')">There's one more thing 🎁</button>
+    </div>
+  </section>
+
+  <!-- STEP 4 -->
+  <section id="step4" class="stage">
+    <h2>A little gift for you 🎀</h2>
+    <button onclick="openTeddy()">🎁 Open Your Surprise</button>
+
+    <div id="teddyContent" style="display:none">
+      <div class="teddy">🧸💗</div>
+      <h3>A little teddy for you, Sneha! 💕</h3>
+      <p>Jab bhi udaas ho, yaad rakhna ki tum special ho. 🫶</p>
+      <button onclick="goTo('step5')">One last magical moment 🌙</button>
+    </div>
+  </section>
+
+  <!-- STEP 5 -->
+  <section id="step5" class="stage">
+    <div class="magic-orb">🌙</div>
+    <h2>A Little Magic for Sneha 💜</h2>
+    <p>Ready for your final surprise?</p>
+    <button onclick="startMagic()">🌙 Open My Magical Surprise 💜</button>
+
+    <div id="magicContent" style="display:none">
+      <div class="secret-card">
+        <div class="magic-orb">✨</div>
+        <p id="magicLine" class="magic-line"></p>
+        <button id="magicNext" onclick="nextMagic()">Reveal next ✨</button>
+      </div>
+    </div>
+  </section>
+
+  <p class="footer">Made with a little care, just for you 💗</p>
+</main>
 
 <script>
+ 
 const messages = [
   "Sneha, tumhari friendship mere liye bahut special hai. Tumse baat karke din thoda aur achha lagta hai. ❤️",
+
   "Main chahta hoon ki hamari friendship hamesha trust, respect aur happiness se bhari rahe. Tumhari baatein aur feelings mere liye matter karti hain. 🫶",
+
   "Sach kahun toh, tum mere liye sirf ek friend se thodi zyada special ban gayi ho. Main tumhari care karna chahta hoon aur tumhe waise hi respect dena chahta hoon jaise tum deserve karti ho. 💗",
+
   "Kya tum kabhi hamari friendship ko ek relationship ke roop mein explore karne ke baare mein sochogi? ❤️"
 ];
 
- function showMessage(index) {
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwq3XjNWT7SDjxLn4YwGxbGpzwHj23fHqj7Yh-e5fKsJr9XWzHYy22AtTmA5qBsaOwD/exec";
+
+function saveToGoogleSheet(choice) {
+  const responses = {
+    yes: "Yes",
+    think: "Sochne do",
+    friends: "Friends"
+  };
+
+  const response = responses[choice];
+  if (!response) return;
+
+  fetch(
+    GOOGLE_SCRIPT_URL + "?response=" + encodeURIComponent(response),
+    { method: "GET", mode: "no-cors" }
+  ).catch(error => console.error(error));
+}
+
+function showMessage(index) {
   const box = document.getElementById("message");
   const choices = document.getElementById("choices");
 
-  box.innerHTML = "<p>" + messages[index] + "</p>";
+  box.innerHTML = "";
+  const p = document.createElement("p");
+  p.textContent = messages[index];
+  p.style.animation = "appear .8s ease both";
+  box.appendChild(p);
+
+  choices.style.display = "block";
 
   if (index < 3) {
-    choices.style.display = "block";
-    choices.innerHTML =
-      '<button onclick="showMessage(' + (index + 1) + ')">Next ➜</button>';
+    const labels = [
+      "Our friendship 🫶",
+      "Something from my heart 💌",
+      "One little question 💖"
+    ];
+
+    choices.innerHTML = "";
+    const btn = document.createElement("button");
+    btn.textContent = labels[index];
+    btn.onclick = () => showMessage(index + 1);
+    choices.appendChild(btn);
   } else {
-    choices.style.display = "block";
     choices.innerHTML = `
-      <button onclick="answer('yes', this)">Yes ❤️</button>
-      <button class="secondary" onclick="answer('think', this)">Sochne do 💭</button>
-      <button class="secondary" onclick="answer('friends', this)">Friends 🤝</button>
+      <button onclick="answer('yes')">Yes ❤️</button>
+      <button onclick="answer('think')">Sochne do 💭</button>
+      <button onclick="answer('friends')">Friends 🤝</button>
     `;
   }
 }
 
-function answer(choice, clickedButton) {
-  clickedButton.style.display = "none";
-  const SAVE_URL = "https://script.google.com/macros/s/AKfycbyDmxV3fLPDFIW3mLef5kGKXGASU_MG5_vsN2Kpi1QLQJBdUzME5it9PipWSATcxA7Q/exec";
+function answer(choice) {
+  saveToGoogleSheet(choice);
 
-const savedChoice = {
-  yes: "Yes",
-  think: "Sochne do",
-  friends: "Friends"
-};
-
-if (savedChoice[choice]) {
-  fetch(SAVE_URL + "?choice=" +
-    encodeURIComponent(savedChoice[choice]), {
-      mode: "no-cors"
-    });
-}
   const box = document.getElementById("message");
+
   const replies = {
     yes: "Tumne mere face par smile la di, Sneha! ❤️ Chalo, aaram se ek doosre ko aur samajhte hain. Koi jaldi nahi. 🥹",
     think: "Bilkul, Sneha! ❤️ Tum aaram se soch sakti ho. Tumhari feelings aur comfort mere liye important hain. Koi pressure nahi. 🌷",
     friends: "Thank you honestly batane ke liye, Sneha. ❤️ Main tumhari choice ki respect karta hoon. Hamari friendship bhi mere liye special hai. 🫶"
   };
-  box.innerHTML = "<p>" + replies[choice] + "</p>";
-  document.getElementById("choices").style.display = "none";
+
+  box.innerHTML = "";
+  const p = document.createElement("p");
+  p.textContent = replies[choice];
+  box.appendChild(p);
+  choices.style.display = "none";
+
+  setTimeout(() => goTo("step2"), 2800);
+}
+ 
+function startHeartIntro() {
+  const intro = document.getElementById("heartIntro");
+  if (intro.dataset.started === "yes") return;
+  intro.dataset.started = "yes";
+
+  const heart = intro.querySelector(".intro-heart");
+  const rect = heart.getBoundingClientRect();
+  const centerX = rect.left + rect.width / 2;
+  const centerY = rect.top + rect.height / 2;
+
+  
+
+for (let i = 0; i < 26; i++) {
+  const particle = document.createElement("span");
+  particle.className = "heart-burst";
+  particle.textContent = ["💗", "💕", "💖", "✨"][i % 4];
+
+  particle.style.left = centerX + "px";
+  particle.style.top = centerY + "px";
+
+  const angle = Math.random() * Math.PI * 2;
+  const distance = 90 + Math.random() * 130;
+
+  particle.style.setProperty("--x", Math.cos(angle) * distance + "px");
+  particle.style.setProperty("--y", Math.sin(angle) * distance + "px");
+
+  document.body.appendChild(particle);
+  setTimeout(() => particle.remove(), 1600);
+}
+
+
+
+  heart.style.transform = "scale(1.5)";
+  heart.style.transition = "transform .25s";
+
+  setTimeout(() => {
+    intro.style.display = "none";
+    burstHearts();
+  }, 650);
+}
+
+function goTo(id) {
+  document.querySelectorAll(".stage").forEach(stage => {
+    stage.classList.remove("active");
+  });
+
+  const next = document.getElementById(id);
+  next.classList.add("active");
+  next.scrollIntoView({ behavior: "smooth", block: "center" });
+  burstHearts();
+}
+
+function openLetter() {
+  document.getElementById("letterContent").style.display = "block";
+  burstHearts();
+}
+
+function openSecret() {
+  document.getElementById("secretContent").style.display = "block";
+  burstHearts();
+}
+
+function openTeddy() {
+  document.getElementById("teddyContent").style.display = "block";
+  burstHearts();
+}
+
+const magicLines = [
+  "Take a little breath, Sneha... this moment is just for you. 🌙",
+  "I hope your life is always filled with little reasons to smile. ✨",
+  "Aapki khushi aur aapki respect mere liye important hai. 🫶",
+  "Aur ek chhoti si baat... aap mere liye bahut special ho. 💜",
+  "May your little wishes find their way to you. 💗"
+];
+
+let magicIndex = 0;
+
+function startMagic() {
+  document.getElementById("magicContent").style.display = "block";
+  document.getElementById("magicLine").textContent = magicLines[0];
+  document.getElementById("magicNext").textContent = "Reveal next ✨";
+  magicIndex = 1;
+  burstHearts();
+}
+
+function nextMagic() {
+  const line = document.getElementById("magicLine");
+  const btn = document.getElementById("magicNext");
+
+  if (magicIndex < magicLines.length) {
+    line.style.animation = "none";
+    void line.offsetWidth;
+    line.style.animation = "appear .7s ease both";
+    line.textContent = magicLines[magicIndex];
+    magicIndex++;
+
+    if (magicIndex === magicLines.length) {
+      btn.textContent = "One last wish 💗";
+    }
+  } else {
+    btn.style.display = "none";
+    line.textContent = "Whatever happens, I hope you always feel valued, respected and appreciated. ❤️🫶";
+    burstHearts();
+  }
 }
 
 function createHeart() {
   const heart = document.createElement("div");
   heart.className = "heart";
-  heart.textContent = ["💗","💕","💖","❤️"][Math.floor(Math.random()*4)];
-  heart.style.left = Math.random()*100 + "vw";
-  heart.style.fontSize = (15 + Math.random()*15) + "px";
+  heart.textContent = ["💗", "💕", "💖", "❤️", "✨"][Math.floor(Math.random() * 5)];
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = (15 + Math.random() * 15) + "px";
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 5000);
 }
-setInterval(createHeart, 650);
+
+function burstHearts() {
+  for (let i = 0; i < 12; i++) {
+    setTimeout(createHeart, i * 100);
+  }
+}
+
+setInterval(createHeart, 900);
   
-const SAVE_URL = "https://script.google.com/macros/s/AKfycbyDmxV3fLPDFIW3mLef5kGKXGASU_MG5_vsN2Kpi1QLQJBdUzME5it9PipWSATcxA7Q/exec";
+const bgMusic = document.getElementById("bgMusic");
+const musicBtn = document.getElementById("musicBtn");
 
-document.querySelectorAll("button").forEach(button => {
-  button.addEventListener("click", function () {
-    const text = button.textContent.trim().toLowerCase();
-    let choice = "";
+bgMusic.volume = 0.25;
 
-    if (text.includes("yes")) choice = "Yes";
-    else if (text.includes("sochne do")) choice = "Sochne do";
-    else if (text.includes("friends")) choice = "Friends";
-
-    if (choice) {
-      fetch(SAVE_URL + "?choice=" + encodeURIComponent(choice), {
-        mode: "no-cors"
-      });
-    }
-  });
-});
-
-function revealSecret() {
-  document.getElementById("secretMessage").style.display = "block";
-  document.getElementById("secretBtn").style.display = "none";
-}
-
-const snehaMagicLines = [
-  "Take a little breath, Sneha... this moment is just for you. 🌙",
-  "I hope your life is always filled with little reasons to smile. ✨",
-  "Aapki khushi aur aapki respect mere liye important hai. 🫶",
-  "Aur ek chhoti si baat... aap mere liye bahut special ho. 💜"
-];
-
-let snehaMagicIndex = 0;
-
-function startSnehaMagic() {
-  snehaMagicIndex = 0;
-  document.getElementById("wishStory").style.display = "block";
-  document.getElementById("wishStartBtn").style.display = "none";
-  nextSnehaMagicLine();
-  makeSnehaMagicStars();
-}
-
-function nextSnehaMagicLine() {
-  const line = document.getElementById("wishLine");
-  const nextBtn = document.getElementById("wishNextBtn");
-
-  if (snehaMagicIndex >= snehaMagicLines.length) {
-    line.textContent = "May your little wishes find their way to you. 💗";
-    nextBtn.style.display = "none";
-    return;
+function toggleMusic() {
+  if (bgMusic.paused) {
+    bgMusic.play().then(() => {
+      musicBtn.textContent = "🎵 Music Off";
+    }).catch(() => {
+      musicBtn.textContent = "🔇 Tap to retry";
+    });
+  } else {
+    bgMusic.pause();
+    musicBtn.textContent = "🎵 Music On";
   }
-
-  line.classList.remove("line-glow");
-  line.textContent = snehaMagicLines[snehaMagicIndex];
-  snehaMagicIndex++;
-
-  void line.offsetWidth;
-  line.classList.add("line-glow");
-
-  if (snehaMagicIndex >= snehaMagicLines.length) {
-    nextBtn.textContent = "One last wish 💗";
-  }
-}
-
-function makeSnehaMagicStars() {
-  const box = document.getElementById("snehaWish");
-  const symbols = ["✦", "✧", "⋆", "✨"];
-
-  for (let i = 0; i < 14; i++) {
-    const star = document.createElement("span");
-    star.className = "magic-spark";
-    star.textContent = symbols[i % symbols.length];
-    star.style.left = (5 + Math.random() * 90) + "%";
-    star.style.top = (45 + Math.random() * 40) + "%";
-    star.style.animationDelay = (Math.random() * 0.7) + "s";
-    box.appendChild(star);
-
-    setTimeout(function() {
-      star.remove();
-    }, 3000);
-  }
-}
-
-
-function openSnehaWish() {
-  document.getElementById("firstPage").style.display = "none";
-
-  const wishPage = document.getElementById("snehaWish");
-  wishPage.style.display = "block";
-  wishPage.scrollIntoView({
-    behavior: "smooth",
-    block: "start"
-  });
-}
-
-
-function showTeddyGift() {
-  document.getElementById("teddyGift").style.display = "block";
-  document.getElementById("teddyBtn").textContent = "💗 Your Teddy Gift";
 }
 
 </script>
-  
-<section id="snehaWish" class="magic-wish" style="display:none;">
-  <div class="wish-stars">✦ ✧ ✦</div>
-  <div class="wish-orb">🌙</div>
-  <p class="wish-small">A LITTLE MAGIC FOR</p>
-  <h2>Sneha 💜</h2>
-  <p class="wish-intro">Every heart has a little wish... ✨</p>
-
-  <button type="button" id="wishStartBtn"
-    onclick="startSnehaMagic()">
-    ✨ Make a Wish
-  </button>
-
-  <div id="wishStory">
-    <p id="wishLine"></p>
-    <button type="button" id="wishNextBtn"
-      onclick="nextSnehaMagicLine()">
-      Reveal next ✨
-    </button>
-  </div>
-</section>
 
 </body>
 </html>
